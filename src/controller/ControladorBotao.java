@@ -39,13 +39,9 @@ public class ControladorBotao  implements 	ActionListener{
 			professor.setInstituicao(CadastroProfessorPanel.getInstituicaoProfessor().getText());
 			String salario = CadastroProfessorPanel.getSalarioProfessor().getText();
 			professor.setSalario(Float.parseFloat(salario));
-			System.out.println(professor.getNome() );
-			System.out.println(professor.getDisciplina());
-			System.out.println(professor.getInstituicao() );
-			System.out.println(professor.getSalario());
-				professores.add(professor);
-				//ControladorRepositorio.setProfessores(professor);
-				//ControladorRepositorio.getProfessores();
+
+			professores.add(professor);
+				
 				
 				try {
 					arquivo.createFileProfessor(professores);
@@ -61,7 +57,7 @@ public class ControladorBotao  implements 	ActionListener{
 			aluno.setMatricula(CadastroAlunoPanel.getMatricula().getText());
 			aluno.setCpf(CadastroAlunoPanel.getCpf().getText());
 			aluno.setRg(CadastroAlunoPanel.getRg().getText());
-			System.out.println(aluno.getNome() );
+			
 			alunos.add(aluno);
 			try {
 				arquivo.createFileAluno(alunos); 
@@ -76,7 +72,7 @@ public class ControladorBotao  implements 	ActionListener{
 			diciplina.setCodigo(CadastroDiciplinaPanel.getCodigoDiciplina().getText());
 			diciplina.setCargaHoraria(CadastroDiciplinaPanel.getCargaHoraria().getText());
 			diciplina.setDescricao(CadastroDiciplinaPanel.getDescricaoDiciplina().getText());
-			//System.out.println(aluno.getNome() );
+			
 			diciplinas.add(diciplina);
 			try {
 				arquivo.createFileDisciplina(diciplinas);
